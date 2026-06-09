@@ -83,10 +83,9 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Raspberry Pi 4 4GB Starter Kit | Converting raw infrared radiation data to useable thermal readings and creating thermal images | $147.79 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/RasTech-Raspberry-Starter-Heatsink-Screwdriver/dp/B0C8LV6VNZ/ref=sr_1_1?crid=H858RUP1GVGJ&dib=eyJ2IjoiMSJ9.2HMtfI55o-jCAhg3n24VqcHqd28JgVwq_KHhbgkkY4I8SmClwzS1SWxigj4MRUP1vR7FwjO5d5VZvEkDfo3MCMX-fjZNvdKmAOmox1zTMs5O6UvQh4M5ciMj7XHkvVA4MbxLJNFpSMIyTYQUBuwe82-79JUo8-VHxRusRwNJktFidiGQROEb6xRUQBoaxJiFmMiIzHzByFXxRstYmg48ANKjXpPmnyBaUhu-Kb4VyJY.t1kDiKpg8nlTriBtHmPPfHmazEwSEM0OAZk--b7xDnE&dib_tag=se&keywords=raspberry%2Bpi%2B4%2B4gb%2Bstarter%2Bkit%2Bwith%2Bpi%2B4%2B4gb%2Bboard&nsdOptOutParam=true&qid=1781014855&sprefix=raspberry%2Bpi%2B4%2B4gb%2Bstarter%2Bkit%2Bwith%2Bpi%2B4%2B4gb%2Bboar%2Caps%2C128&sr=8-1&th=1)"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
+# Other Resources
+- [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+- [Raspberry Pi SSH Guide](https://www.onlogic.com/uk/blog/how-to-ssh-into-raspberry-pi/)
+- [Raspberry Pi Setup](https://www.tme.com/in/en/news/library-articles/diy/page/64698/a-simple-guide-to-setting-up-a-raspberry-pi/)
+- [Raspberry Pi Virtual Environment For Python](https://www.raspberrypi.com/news/using-python-with-virtual-environments-the-magpi-148/)
 - [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
-
-To watch the BSE tutorial on how to create a portfolio, click here.
