@@ -12,7 +12,7 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 
 ![Headstone Image](logo.svg)
   
-# Final Milestone
+# First Milestone *Final
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
@@ -38,7 +38,7 @@ For your second milestone, explain what you've worked on since your previous mil
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
 
-# First Milestone
+# Final Milestone *First
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
