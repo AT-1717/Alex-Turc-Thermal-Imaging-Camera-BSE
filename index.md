@@ -19,10 +19,18 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
 - Challenges you're facing and solving in your future milestones
 - What your plan is to complete your project
+- For the first milestone, I decided to set up the Raspberry Pi and connect it to the thermal camera to begin receiving text-only temperature readings.
+- So far, the project includes a Raspberry Pi 4B, an MLX90640-D55 thermal camera, and python code. The camera scans the surrounding area to gather thermal data, then sending it to the Raspberry Pi, which uses the python code to interpret the data and display it in text format on the command terminal. The Raspberry Pi acts as the brain of the project, taking data from the camera, interpreting the data, sending the data elsewhere, as well as distributing power to all components. By itself, the thermal camera has no ability to process the thermal readings or display any data. The Raspberry Pi is therefore essential to be able to use the data, and the python code is the crucial element informing the Raspberry Pi on how to take raw thermal readings and use mathematical algorithms to translate thermal data into temperatures.
+## Technical Progress
+### Setting up the Raspberry Pi
+- I first set up the Raspberry Pi, using the Raspberry Pi Imager to install the operating system onto a micro SD card from my computer. I then took the micro SD and plugged it into the Raspberry Pi, enabling it to have an operating system. After this, updates and upgrades were installed to ensure that the Pi was up to date, along with specific packages such as adafruit-blinka. These packages were necessary to ensure that python could run on the Raspberry Pi.
+### Connecting the Camera
+- Next, I had to connect the camera to the Raspberry Pi, with each of the four wires needing to connect to specific pins. The camera uses a 3V power supply, corresponding to pin 1 on the Pi. The camera also has two communication wires, SDA (Serial Data) and SCL (Serial Clock). SDA transferrs the actual information, while SCL controls the speed of communication and the rate at which information is exchanged between the Pi and the camera.
+### Coding
+- The final step of my first mileston was using python code to allow the Raspberry Pi to properly process the information given to it by the thermal camera. Although the Pi acts as the brain of the operation, it does not know how to actually use the information until the python code tells it how to interpret the raw thermal data. When the code is run, the camera records data and sends it to the Raspberry Pi. The Pi processes the data and turns it into temperatures which are then displayed on the command terminal.
+
 
 
 
