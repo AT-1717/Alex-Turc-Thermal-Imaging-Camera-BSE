@@ -36,7 +36,7 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 
 
 
-# Second Milestone
+<!--# Second Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
