@@ -42,12 +42,11 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 
 ## Technical Progress
 ### Coding
-- To progress from text-only readings to an actual image, I had to replace the text-only code with a new Python script that would convert the raw thermal readings into a thermogram. When run, the thermal camera now displays an image on a monitor connected to the Raspberry Pi.
+- To progress from text-only readings to an actual image, I had to replace the text-only code with a new Python script that converts the raw thermal readings into a thermogram. When run, the thermal camera now displays an image on a monitor connected to the Raspberry Pi. However, the resulting image is low-quality and provides a very limited and pixelated view. To solve this, I added another Python script that interpolated the original 24x32 thermal display, resulting in a smoother and enhanced image. Interpolation estimates unknown data values between known values. As such, the image now contains "artificial" pixels interspersed between the original pixels. These new pixels are approximations of the thermal values between the pixels of the original 24x32 display, creating both a higher resolution image and a smoother display. 
 ### Modifications
 - While using the camera, I had to be very careful, as the Raspberry Pi was exposed and was very easy to damage. It was also becoming difficult to touch, as my camera detected that the Pi was reaching temperatures of up to 42 degrees Celsius. Although this is not dangerous for the Raspberry Pi itself, it made the camera hard to handle. Therefore, I decided to add copper heatsinks and a fan. The heatsinks are attached to the main chips of the Pi, using the conductive property of copper to draw heat away from the chips and into the heatsink. The fan then pumps air across the surface of the heatsink, dispersing the heat. I also added a protective case to protect the Raspberry Pi, where the lid of the case also holds the fan in place. The protective case makes the cooling system even more essential, as a lone Raspberry Pi in a closed low-ventilation plastic case would easily overheat.
 
 For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
 - What has been surprising about the project so far
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
