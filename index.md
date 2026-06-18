@@ -51,8 +51,9 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 - The replacement camera was in perfect condition, but while I was adding my fan, the ground wire was damaged. The fan had a 5V wire and a ground wire, both encased within a plastic connector. As such, they had to be placed adjacent to each other on the Raspberry Pi's 40-pin layout. The only possible orientation for this was to place the plastic connector at pins 4 and 6, which was next to the wires for the thermal camera. Because the plastic casing for the fan wires was fairly large, placing it next to the camera wires led to bending and damage, even if the damage was not visible. Combined with the strained position caused by the lid of the case, the ground wire was damaged and stopped working. I remembered that the old thermal camera had functional wires, and just the camera itself was damaged. I chose to swap the wires from the new camera with those from the old camera, resulting in a functioning camera with a fully functional set of wires. Furthermore, to add the fan back, I needed to find a way to place it in a different position. I realized that I could use male to female jumper wires to be able to put the 5V wire and the ground wire in different positions on the Raspberry Pi. These wires were also smaller, so they would not cause damage to surrounding connections. This allowed me to operate both the camera and the fan at the same time.
 - cut a hole in the lid
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- What needs to be completed before your final milestone 
+## Future Plans
+- Currently, the thermal camera can display an image of the surrounding temperatures. However, it must remain plugged into an outlet in the wall and the display relies on a stationary computer monitor. This makes the camera extremely limited, as it cannot be moved. I plan to use a 7-inch display and a portable battery to make the thermal camera portable. This way, it can be carried around to any location for as long as the battery lasts.
+ 
 
 <!--# Final Milestone
 
