@@ -14,8 +14,6 @@ Normal humans can only see visible light. Imagine being able to see in an entire
   
 # First Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yVGZo8T66iE?si=1QpRDz8t5H55B18i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - For the first milestone, I decided to set up the Raspberry Pi and connect it to the thermal camera to begin receiving text-only temperature readings.
@@ -36,11 +34,17 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 
 
 
-<!--# Second Milestone
+# Second Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Technical Progress
+### Coding
+- To progress from text-only readings to an actual image, I had to replace the text-only code with a new Python script that would convert the raw thermal readings into a thermogram. When run, the thermal camera now displays an image on a monitor connected to the Raspberry Pi.
+### Modifications
+- While using the camera, I had to be very careful, as the Raspberry Pi was exposed and was very easy to damage. It was also becoming difficult to touch, as my camera detected that the Pi was reaching temperatures of up to 42 degrees Celsius. Although this is not dangerous for the Raspberry Pi itself, it made the camera hard to handle. Therefore, I decided to add copper heatsinks and a fan. The heatsinks are attached to the main chips of the Pi, using the conductive property of copper to draw heat aways from the chips and into the heatsink. The fan then pumps air across the surface of the heatsink, dispersing the heat. I also added a protective case to protect the Raspberry Pi, where the lid of the case also holds the fan in place. The protective case makes the cooling system even more essential, as a lone Raspberry Pi in a closed low-ventilation plastic case would easily overheat.
 
 For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
 - Technical details of what you've accomplished and how they contribute to the final goal
@@ -48,7 +52,7 @@ For your second milestone, explain what you've worked on since your previous mil
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
 
-# Final Milestone
+<!--# Final Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
