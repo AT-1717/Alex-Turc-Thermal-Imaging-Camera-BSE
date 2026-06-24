@@ -1,6 +1,5 @@
 # Thermal Imaging Camera
-
-
+/
 Normal humans can only see visible light. Imagine being able to see in an entirely new dimension - heat! With the power of a Raspberry Pi 4 and an MLX90640-D55 thermal camera, you can explore the new world of thermal vision and see beyond the ordinary. The thermal camera captures raw data which is then processed by the Raspberry and displayed as a thermogram.
 
 
