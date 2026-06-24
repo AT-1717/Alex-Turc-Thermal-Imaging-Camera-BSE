@@ -55,14 +55,11 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 - Currently, the thermal camera can display an image of the surrounding temperatures. However, it must remain plugged into an outlet in the wall and the display relies on a stationary computer monitor. This makes the camera extremely limited, as it cannot be moved. I plan to use a 7-inch display and a portable battery to make the thermal camera portable. This way, it can be carried around to any location for as long as the battery lasts.
  
 
-<!--# Final Milestone
-
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+# Final Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-For your final milestone, explain the outcome of your project. Key details to include are:
 - What you've accomplished since your previous milestone
 - What your biggest challenges and triumphs were at BSE
 - A summary of key topics you learned about
@@ -74,7 +71,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
-```c++
+```python
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -95,7 +92,8 @@ void loop() {
 | MLX90640-D55 Thermal Imaging Camera | Capturing thermal radiation data for later processing | $66.30 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/MLX90640-D55-Camera-Compatible-Firefighting-Maintenance/dp/B0FQHVSX91/ref=sr_1_1?dib=eyJ2IjoiMSJ9.jtNmEUR-VLfwR8hJ1WjkNVY3VPySrW2bIGnH2NSUyn6m8nhTRFDHPY6YVo4mLBkRc74tI_rWtxQjdTZxwcbizjL2RYnrAAuZNBwUwlVd7YqlmMfvj4r_R8B7PvDr6qpBePyuLE01dsYIQT7V5eSGT_kvE9efR4pfdsueW-OmAfiFNDadrS9jiiQyXJR-fLYbTfqnpk_jbZ-VEeOFLNXqqV9ip1bo3zLFXjRpoYvtOlA.CINsSo8TMzkVIALr3qcIUSqzT1uVdxTs3g-1aQQATSU&dib_tag=se&keywords=mlx90640-d55+thermal+imaging+camera%2C+32x34+IR+array&qid=1781014765&sr=8-1)"> Link </a> |
 | USB to Micro SD Card Adapter | Adapting a Micro SD Card to USB for use on a computer | $8.99 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/uni-Adapter-Supports-Compatible-MacBook/dp/B081VHSB2V/ref=sr_1_1_sspa?crid=4HMRF3ZXALEF&dib=eyJ2IjoiMSJ9.3vArOtBXB8aXRuKS3rF7i1W8da1mEJZ8FAyQegKc6Qv-nrgdHMgbAkmIkR88XQLEdRpD246tyGdE5FEj8RrFrqYi-7b8nIAgkHXmmnUqpGaUyuZhtWDp68ATDQwplNNrcK6h5DnuiBsgcLkHNhQpFTHu-9pgERSckNd66AyX1iG3Svd3cLGtrqwAUO78rHqmqVnRfLaZH-aZnLJgDjyg3RbDGqByar3kimNjPZCUdiS8dudgH8ajmyD8RSnFddEd7-72pyILS-f37yzbQZ8IzeDlUyC7Yf32Y0R3ZMZqw4k.czrbZM6nHxzsWFQhOnxFrCl8msMVR4X7z-G3IH3l9DI&dib_tag=se&keywords=uni%2Bsd%2Bcard%2Breader%2C%2Bhigh%2Bspeed%2Busb%2Bc%2Bto%2Bmicro%2Bsd&nsdOptOutParam=true&qid=1781014814&s=electronics&sprefix=uni%2Bsd%2Bcard%2Breader%2C%2Bhigh%2Bspeed%2Busb%2Bc%2Bto%2Bmicro%2Bsd%2Celectronics%2C112&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1)"> Link </a> |
 | Raspberry Pi 4 4GB Starter Kit | Converting raw infrared radiation data to useable thermal readings and creating thermal images, as well as provifing useful additions to the Raspberry Pi | $147.79 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/RasTech-Raspberry-Starter-Heatsink-Screwdriver/dp/B0C8LV6VNZ/ref=sr_1_1?crid=H858RUP1GVGJ&dib=eyJ2IjoiMSJ9.2HMtfI55o-jCAhg3n24VqcHqd28JgVwq_KHhbgkkY4I8SmClwzS1SWxigj4MRUP1vR7FwjO5d5VZvEkDfo3MCMX-fjZNvdKmAOmox1zTMs5O6UvQh4M5ciMj7XHkvVA4MbxLJNFpSMIyTYQUBuwe82-79JUo8-VHxRusRwNJktFidiGQROEb6xRUQBoaxJiFmMiIzHzByFXxRstYmg48ANKjXpPmnyBaUhu-Kb4VyJY.t1kDiKpg8nlTriBtHmPPfHmazEwSEM0OAZk--b7xDnE&dib_tag=se&keywords=raspberry%2Bpi%2B4%2B4gb%2Bstarter%2Bkit%2Bwith%2Bpi%2B4%2B4gb%2Bboard&nsdOptOutParam=true&qid=1781014855&sprefix=raspberry%2Bpi%2B4%2B4gb%2Bstarter%2Bkit%2Bwith%2Bpi%2B4%2B4gb%2Bboar%2Caps%2C128&sr=8-1&th=1)"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Elegoo Upgraded Electronics Fun Kit | Jumper wires and additional electronic components for future modifications | $13.59 | <a href="https://www.amazon.com/ELEGOO-Electronics-Potentiometer-tie-Points-Breadboard/dp/B09YRJQRFF/ref=sr_1_1?crid=KLEPFNRC166O&dib=eyJ2IjoiMSJ9.JqirajKUyZ6uAVBYmWDLYfLpUsrtoMvs1B6Cleaj-_tCGiP_t75U_0GI9wzy78zkLZv03zfQbFBrypHp7Um6U0paDDyTT3kihslKFCJ1fGzYSbFEhz5dKzO1nydx41FMV4B3UB6e3MMBVJOfmpT4XhUqQNwvIm8v1SLRgneJmaVfz5QsGmBt_UewI8qG8PY9ExIiofEsgE1yu4E8mEvOFs4mP609iSkEqLAyuYnxIlM.h4sxd--4QK_O1mElc6cF3QJsy_ClwPQpkvwtym23GUo&dib_tag=se&keywords=elegoo+upgraded+electronics+fun+kit&qid=1782308541&sprefix=elegoo+upgradedelectronics+fun+kit%2Caps%2C110&sr=8-1"> Link </a> |
+| Hosyond 7" LCD Display | 7-inch portable display for visualizing thermal images | $36.79 | <a href="https://www.amazon.com/Hosyond-Display-1024%C3%97600-Capacitive-Raspberry/dp/B09XKC53NH/ref=sr_1_2_sspa?adgrpid=185077474263&dib=eyJ2IjoiMSJ9.Sophd7EceTdQ7WQOFpuYHTxXMkkm8GLZOqk6Sf_u9o51iUN3boTR3F8-hbwsph_WGqOV0FyuhXAFc7Gq88Lf4DGqQ1GJS0reGN9Jm_JuEv_LdsZr8DdazO2q3_31WZXILYcmkKpmYHbwWpCz6kVzQu9IWNm2ZeVeLYogt20UwfKB8GzbjGhhQS2Ql9WBq4obACxAH6npvllHAMv5rCFJOvm0nJC03W1b1ERmITTYHeg.kl9igvFTce-joTztK4Fjrf_bhkAL8egZiwfcyATDcwQ&dib_tag=se&hvadid=779528287117&hvdev=c&hvexpln=0&hvlocphy=9010753&hvnetw=g&hvocijid=5662668196022670780--&hvqmt=e&hvrand=5662668196022670780&hvtargid=kwd-2474963753682&hydadcr=18037_13447374_16249&keywords=hosyond%2B7%2Binch%2Btouchscreen&mcid=587a8d7b4df23ab0b2fe2b72ecf47f9e&qid=1782308758&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1"> Link </a> |
 
 # Other Resources
 - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
@@ -104,3 +102,4 @@ void loop() {
 - [Raspberry Pi Virtual Environment For Python](https://www.raspberrypi.com/news/using-python-with-virtual-environments-the-magpi-148/)
 - [3D Print Models](https://www.printables.com/tag/bitbeam)
 - [Fritzing](https://fritzing.org/)
+- [DIY Thermal Camera](https://how2electronics.com/diy-thermal-imaging-camera-with-mlx90640-raspberry-pi/)
