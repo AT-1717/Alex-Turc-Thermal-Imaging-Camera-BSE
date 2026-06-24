@@ -69,19 +69,105 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 ![Model of the Completed Thermal Camera](Fritzing Model for Github.png)
 
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
-
+Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
+## Text-only Readings
 ```python
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-
-}
+import time
+import board
+import busio
+import numpy as np
+import adafruit_mlx90640
+ 
+def main():
+    # Setup I2C connection
+    i2c = busio.I2C(board.SCL, board.SDA, frequency=400000)
+    mlx = adafruit_mlx90640.MLX90640(i2c)
+    mlx.refresh_rate = adafruit_mlx90640.RefreshRate.REFRESH_2_HZ
+ 
+    frame = np.zeros((24 * 32,))  # Initialize the array for all 768 temperature readings
+ 
+    while True:
+        try:
+            mlx.getFrame(frame)  # Capture frame from MLX90640
+            average_temp_c = np.mean(frame)
+            average_temp_f = (average_temp_c * 9.0 / 5.0) + 32.0
+            print(f"Average MLX90640 Temperature: {average_temp_c:.1f}C ({average_temp_f:.1f}F)")
+            time.sleep(0.5)  # Adjust this value based on how frequently you want updates
+ 
+        except ValueError as e:
+            print(f"Failed to read temperature, retrying. Error: {str(e)}")
+            time.sleep(0.5)  # Wait a bit before retrying to avoid flooding with requests
+        except KeyboardInterrupt:
+            print("Exiting...")
+            break
+        except Exception as e:
+            print(f"An unexpected error occurred: {str(e)}")
+ 
+if __name__ == "__main__":
+    main()
+```
+## Interpolated Thermal Visual Code
+```python
+import time
+import board
+import busio
+import numpy as np
+import adafruit_mlx90640
+import matplotlib.pyplot as plt
+ 
+def initialize_sensor():
+    i2c = busio.I2C(board.SCL, board.SDA)
+    mlx = adafruit_mlx90640.MLX90640(i2c)
+    mlx.refresh_rate = adafruit_mlx90640.RefreshRate.REFRESH_4_HZ
+    return mlx
+ 
+def setup_plot():
+    plt.ion()
+    fig, ax = plt.subplots(figsize=(12, 7))
+    therm1 = ax.imshow(np.zeros((24, 32)), vmin=0, vmax=60, cmap='inferno', interpolation='bilinear')
+    cbar = fig.colorbar(therm1)
+    cbar.set_label('Temperature [°C]', fontsize=14)
+    plt.title('Thermal Image')
+    return fig, ax, therm1
+ 
+def update_display(fig, ax, therm1, data_array):
+    therm1.set_data(np.fliplr(data_array))
+    therm1.set_clim(vmin=np.min(data_array), vmax=np.max(data_array))
+    ax.draw_artist(ax.patch)
+    ax.draw_artist(therm1)
+    fig.canvas.update()
+    fig.canvas.flush_events()
+ 
+def main():
+    mlx = initialize_sensor()
+    fig, ax, therm1 = setup_plot()
+    
+    frame = np.zeros((24*32,))
+    t_array = []
+    max_retries = 5
+ 
+    while True:
+        t1 = time.monotonic()
+        retry_count = 0
+        while retry_count < max_retries:
+            try:
+                mlx.getFrame(frame)
+                data_array = np.reshape(frame, (24, 32))
+                update_display(fig, ax, therm1, data_array)
+                plt.pause(0.001)
+                t_array.append(time.monotonic() - t1)
+                print('Sample Rate: {0:2.1f}fps'.format(len(t_array) / np.sum(t_array)))
+                break
+            except ValueError:
+                retry_count += 1
+            except RuntimeError as e:
+                retry_count += 1
+                if retry_count >= max_retries:
+                    print(f"Failed after {max_retries} retries with error: {e}")
+                    break
+ 
+if __name__ == '__main__':
+    main()
 ```
 
 # Bill of Materials
