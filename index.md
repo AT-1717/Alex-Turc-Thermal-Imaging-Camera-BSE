@@ -59,8 +59,10 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
-- What you've accomplished since your previous milestone
+## Technical Progress
+### Modifications
+- Previously, my camera had to stay plugged in to a stationary computer monitor and to an outlet in the wall. I finished making my thermal camera portable by adding a 5V output portable battery and a 7-inch display screen. With these changes, I can now carry around my camera to any location, making it much more efficient and useful in real-world scenarios.
+- MAYBE 3D PRINTED PROTECTIVE CASE
 - What your biggest challenges and triumphs were at BSE
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE -->
@@ -186,6 +188,6 @@ if __name__ == '__main__':
 - [Raspberry Pi SSH Guide](https://www.onlogic.com/uk/blog/how-to-ssh-into-raspberry-pi/)
 - [Raspberry Pi Setup](https://www.tme.com/in/en/news/library-articles/diy/page/64698/a-simple-guide-to-setting-up-a-raspberry-pi/)
 - [Raspberry Pi Virtual Environment For Python](https://www.raspberrypi.com/news/using-python-with-virtual-environments-the-magpi-148/)
-- [3D Print Models](https://www.printables.com/tag/bitbeam)
 - [Fritzing](https://fritzing.org/)
 - [DIY Thermal Camera](https://how2electronics.com/diy-thermal-imaging-camera-with-mlx90640-raspberry-pi/)
+- [3D Print Models](https://www.printables.com/model/1295933-generic-aliexpress-7-hdmi-display-c-case-remix/files)
