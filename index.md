@@ -8,9 +8,9 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 |:--:|:--:|:--:|:--:|
 | Alexandru T | Cambridge High School | Mechanical Engineering | Incoming Junior
 
-<!--**Replace the BlueStamp logo below with an image of yourself and your completed project.
 
-![Headstone Image](logo.svg) -->
+
+![ ](Complete.jpg)
 
 <br>
 
