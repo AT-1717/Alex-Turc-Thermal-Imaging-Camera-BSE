@@ -59,19 +59,20 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Technical Progress
-### Modifications
+## Modifications
 - Previously, my camera had to stay plugged in to a stationary computer monitor and to an outlet in the wall. I finished making my thermal camera portable by adding a 5V output portable battery and a 7-inch display screen. With these changes, I can now carry around my camera to any location, making it much more efficient and useful in real-world scenarios.
-- MAYBE 3D PRINTED PROTECTIVE CASE
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE -->
+- I then added a 3D-printed protective case around the monitor. Similarly to the Raspberry Pi the monitor also had exposed electronic components that could be damaged if touched. I decided to add the case to make the screen easier both safer and easier to hold.
+## Challenges
+- My biggest challenges occurred when my first camera broke and when I had wiring issues. However, these major setbacks also led to my greatest triumphs. The MLX 90640 camera is very sensitive to static shock, and my initial camera was likely damaged by some form of electric discharge. When I first tried to run my code, a thermal image showed up, but it consisted of a single frozen frame with incorrect temperature readings. I first checked my code, in case there were any mistakes. I then checked to see if the Raspberry Pi could actually detect the device, in case the wires were damaged. Because the code and the wiring seemed to be correct, it led me to the conclusion that the camera was the only part that could have been damaged. After researching, I learned that the camera was very sensitive to static. Static shock damaging the camera's board matched the symptoms I was seeing perfectly. I solved this by ordering a replacement part, which worked well. My second setback occurred when I attempted to connect a 5V fan directly adjacent to the wires from my thermal camera. This led to wire overcrowding, damaging the camera's ground wire. I had to replace the wires from my new camera with those from my old camera, which I had previously discovered were perfectly functional. I then added jumper wires to the 5V fan to be able to individually place the 5V power wire and the ground wire in different places, as they were previously connected in a plastic housing and had to be placed next to each other. Jumper wires allowed me to create space for the camera wires, ensuring that nothing was damaged.
+- By facing these challenges, I learned important lessons about troubleshooting and finding workarounds. When something does not work at first, it is incredibly easy, often convenient, to assume that parts are broken. However, it is likely that there were small mistakes or overlooked parts that caused the errors. It is also important to try to find workarounds for difficult problems. For example, I initially believed that I would have to remove the fan completely due to wire overcrowding, but I realized that I could use jumper wires to separate and extend the fan wires to keep them away from the camera wires.
+- I gained important hands-on experience, translating concepts I knew into a tangible project, as well as gaining entirely new skills. I learned how to set up and use a Raspberry Pi, as well as how to use SSH to connect and code on the Pi. I then learned how to use sensors such as the MLX thermal camera and how to wire components to the Raspberry Pi. I also gained insight into the engineering process, including the difficulties, rewards, and skills needed to succeed.
+## Future Plans
+- In the future, I am interested in creating more projects involving a Raspberry Pi. I also want to gain more experience with coding, potentially in multiple different languages, in order to expand the possible functions of my projects. Most importantly, I want to continue gaining more engineering experience and learning important lifelong lessons.
 
 # Schematics 
 ![Model of the Completed Thermal Camera](Fritzing Model for Github.png)
 
-# Code
-Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
+# Code 
 ## Text-only Readings
 ```python
 import time
