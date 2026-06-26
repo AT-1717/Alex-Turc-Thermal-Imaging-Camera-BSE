@@ -46,7 +46,7 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 - Now that the camera is connected and the Raspberry Pi is fully set up, I need to create a visual representation of the thermal data. For this, I will need to find a display, such as a monitor, and I will need python code. Instead of converting data into text-only temperatures, I will need the code to convert the thermal data into a constantly updating graphic representing surrounding temperatures with colors. After this is completed, I plan to begin working on modifications to my project, which could include additional electronic parts and protective casings for components.
 
 
-
+<br>
 
 # Second Milestone
 
@@ -54,39 +54,63 @@ Normal humans can only see visible light. Imagine being able to see in an entire
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/soFmJLbfSio?si=3WR9Np-5L3k8PV4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<br><br>
+
 ## Technical Progress
+
 ### Coding
 - To progress from text-only readings to an actual image, I had to replace the text-only code with a new Python script that converts the raw thermal readings into a thermogram. When run, the thermal camera now displays an image on a monitor connected to the Raspberry Pi. However, the resulting image is low-quality and provides a very limited and pixelated view. To solve this, I added another Python script that interpolated the original 24x32 thermal display, resulting in a smoother and enhanced image. Interpolation estimates unknown data values between known values. As such, the image now contains "artificial" pixels interspersed between the original pixels. These new pixels are approximations of the thermal values between the pixels of the original 24x32 display, creating both a higher resolution image and a smoother display. 
 ### Modifications
 - While using the camera, I had to be very careful, as the Raspberry Pi was exposed and was very easy to damage. It was also becoming difficult to touch, as my camera detected that the Pi was reaching temperatures of up to 42 degrees Celsius. Although this is not dangerous for the Raspberry Pi itself, it made the camera hard to handle. Therefore, I decided to add copper heatsinks and a fan. The heatsinks are attached to the main chips of the Pi, using the conductive property of copper to draw heat away from the chips and into the heatsink. The fan then pumps air across the surface of the heatsink, dispersing the heat. I also added a protective case to protect the Raspberry Pi, where the lid of the case also holds the fan in place. The protective case makes the cooling system even more essential, as a lone Raspberry Pi in a closed low-ventilation plastic case would easily overheat.
+
+
+<br>
 
 ## Challenges
 - When I first connected my camera to the Raspberry Pi and ran the Python script, an image showed up, but it was a single frozen frame displaying incorrect temperature values. After checking the wire connections and attempting to edit the code, I came to the conclusion that the sensor was corrupted and the camera could not be used to obtain thermal images. I had to then use a replacement camera in order for my project to work. The corruption could have been caused by a small static shock from my hands or the environment, so I decided to be very careful with the replacement camera. I researched and found out that the MLX90640 thermal camera comes inside of an anti-static bag. When not using the camera, I kept the camera inside of the bag to avoid any electric discharge. When I had to use the camera, I carefully removed it from the bag only after touching a grounded metal object to discharge any static electricity from my body.
 - The replacement camera was in perfect condition, but while I was adding my fan, the ground wire was damaged. The fan had a 5V wire and a ground wire, both encased within a plastic connector. As such, they had to be placed adjacent to each other on the Raspberry Pi's 40-pin layout. The only possible orientation for this was to place the plastic connector at pins 4 and 6, which was next to the wires for the thermal camera. Because the plastic casing for the fan wires was fairly large, placing it next to the camera wires led to bending and damage, even if the damage was not visible. Combined with the strained position caused by the lid of the case, the ground wire was damaged and stopped working. I remembered that the old thermal camera had functional wires, and just the camera itself was damaged. I chose to swap the wires from the new camera with those from the old camera, resulting in a functioning camera with a fully functional set of wires. Furthermore, to add the fan back, I needed to find a way to place it in a different position. I realized that I could use male to female jumper wires to be able to put the 5V wire and the ground wire in different positions on the Raspberry Pi. These wires were also smaller, so they would not cause damage to surrounding connections. This allowed me to operate both the camera and the fan at the same time.
 - The orientation of the lid on top of the wires also caused damage, as the lid of the protective case was causing the wires to bend out of shape. To solve this, I cut a small hole in the lid to allow the wires for the camera to pass through. This allowed the wires to sit in their natural orientation without deformation.
 
+<br>
+
 ## Future Plans
 - Currently, the thermal camera can display an image of the surrounding temperatures. However, it must remain plugged into an outlet in the wall and the display relies on a stationary computer monitor. This makes the camera extremely limited, as it cannot be moved. I plan to use a 7-inch display and a portable battery to make the thermal camera portable. This way, it can be carried around to any location for as long as the battery lasts.
- 
+
+ <br>
 
 # Final Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<br><br>
+
 ## Modifications
 - Previously, my camera had to stay plugged in to a stationary computer monitor and to an outlet in the wall. I finished making my thermal camera portable by adding a 5V output portable battery and a 7-inch display screen. With these changes, I can now carry around my camera to any location, making it much more efficient and useful in real-world scenarios.
 - I then added a 3D-printed protective case around the monitor. Similarly to the Raspberry Pi the monitor also had exposed electronic components that could be damaged if touched. I decided to add the case to make the screen easier both safer and easier to hold.
+
+<br>
+
 ## Challenges
 - My biggest challenges occurred when my first camera broke and when I had wiring issues. However, these major setbacks also led to my greatest triumphs. The MLX 90640 camera is very sensitive to static shock, and my initial camera was likely damaged by some form of electric discharge. When I first tried to run my code, a thermal image showed up, but it consisted of a single frozen frame with incorrect temperature readings. I first checked my code, in case there were any mistakes. I then checked to see if the Raspberry Pi could actually detect the device, in case the wires were damaged. Because the code and the wiring seemed to be correct, it led me to the conclusion that the camera was the only part that could have been damaged. After researching, I learned that the camera was very sensitive to static. Static shock damaging the camera's board matched the symptoms I was seeing perfectly. I solved this by ordering a replacement part, which worked well. My second setback occurred when I attempted to connect a 5V fan directly adjacent to the wires from my thermal camera. This led to wire overcrowding, damaging the camera's ground wire. I had to replace the wires from my new camera with those from my old camera, which I had previously discovered were perfectly functional. I then added jumper wires to the 5V fan to be able to individually place the 5V power wire and the ground wire in different places, as they were previously connected in a plastic housing and had to be placed next to each other. Jumper wires allowed me to create space for the camera wires, ensuring that nothing was damaged.
 - By facing these challenges, I learned important lessons about troubleshooting and finding workarounds. When something does not work at first, it is incredibly easy, often convenient, to assume that parts are broken. However, it is likely that there were small mistakes or overlooked parts that caused the errors. It is also important to try to find workarounds for difficult problems. For example, I initially believed that I would have to remove the fan completely due to wire overcrowding, but I realized that I could use jumper wires to separate and extend the fan wires to keep them away from the camera wires.
 - I gained important hands-on experience, translating concepts I knew into a tangible project, as well as gaining entirely new skills. I learned how to set up and use a Raspberry Pi, as well as how to use SSH to connect and code on the Pi. I then learned how to use sensors such as the MLX thermal camera and how to wire components to the Raspberry Pi. I also gained insight into the engineering process, including the difficulties, rewards, and skills needed to succeed.
+
+<br>
+
 ## Future Plans
 - In the future, I am interested in creating more projects involving a Raspberry Pi. I also want to gain more experience with coding, potentially in multiple different languages, in order to expand the possible functions of my projects. Most importantly, I want to continue gaining more engineering experience and learning important lifelong lessons.
+
+<br>
 
 # Schematics 
 ![Model of the Completed Thermal Camera](Fritzing Model for Github.png)
 
+<br>
+
 # Code 
+
+<br>
+
 ## Text-only Readings
 ```python
 import time
@@ -123,6 +147,9 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+<br>
+
 ## Interpolated Thermal Visual Code
 ```python
 import time
@@ -187,6 +214,8 @@ if __name__ == '__main__':
     main()
 ```
 
+<br>
+
 # Bill of Materials
 
 
@@ -197,6 +226,8 @@ if __name__ == '__main__':
 | Raspberry Pi 4 4GB Starter Kit | Converting raw infrared radiation data to useable thermal readings and creating thermal images, as well as provifing useful additions to the Raspberry Pi | $147.79 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/RasTech-Raspberry-Starter-Heatsink-Screwdriver/dp/B0C8LV6VNZ/ref=sr_1_1?crid=H858RUP1GVGJ&dib=eyJ2IjoiMSJ9.2HMtfI55o-jCAhg3n24VqcHqd28JgVwq_KHhbgkkY4I8SmClwzS1SWxigj4MRUP1vR7FwjO5d5VZvEkDfo3MCMX-fjZNvdKmAOmox1zTMs5O6UvQh4M5ciMj7XHkvVA4MbxLJNFpSMIyTYQUBuwe82-79JUo8-VHxRusRwNJktFidiGQROEb6xRUQBoaxJiFmMiIzHzByFXxRstYmg48ANKjXpPmnyBaUhu-Kb4VyJY.t1kDiKpg8nlTriBtHmPPfHmazEwSEM0OAZk--b7xDnE&dib_tag=se&keywords=raspberry%2Bpi%2B4%2B4gb%2Bstarter%2Bkit%2Bwith%2Bpi%2B4%2B4gb%2Bboard&nsdOptOutParam=true&qid=1781014855&sprefix=raspberry%2Bpi%2B4%2B4gb%2Bstarter%2Bkit%2Bwith%2Bpi%2B4%2B4gb%2Bboar%2Caps%2C128&sr=8-1&th=1)"> Link </a> |
 | Elegoo Upgraded Electronics Fun Kit | Jumper wires and additional electronic components for future modifications | $13.59 | <a href="https://www.amazon.com/ELEGOO-Electronics-Potentiometer-tie-Points-Breadboard/dp/B09YRJQRFF/ref=sr_1_1?crid=KLEPFNRC166O&dib=eyJ2IjoiMSJ9.JqirajKUyZ6uAVBYmWDLYfLpUsrtoMvs1B6Cleaj-_tCGiP_t75U_0GI9wzy78zkLZv03zfQbFBrypHp7Um6U0paDDyTT3kihslKFCJ1fGzYSbFEhz5dKzO1nydx41FMV4B3UB6e3MMBVJOfmpT4XhUqQNwvIm8v1SLRgneJmaVfz5QsGmBt_UewI8qG8PY9ExIiofEsgE1yu4E8mEvOFs4mP609iSkEqLAyuYnxIlM.h4sxd--4QK_O1mElc6cF3QJsy_ClwPQpkvwtym23GUo&dib_tag=se&keywords=elegoo+upgraded+electronics+fun+kit&qid=1782308541&sprefix=elegoo+upgradedelectronics+fun+kit%2Caps%2C110&sr=8-1"> Link </a> |
 | Hosyond 7" LCD Display | 7-inch portable display for visualizing thermal images | $36.79 | <a href="https://www.amazon.com/Hosyond-Display-1024%C3%97600-Capacitive-Raspberry/dp/B09XKC53NH/ref=sr_1_2_sspa?adgrpid=185077474263&dib=eyJ2IjoiMSJ9.Sophd7EceTdQ7WQOFpuYHTxXMkkm8GLZOqk6Sf_u9o51iUN3boTR3F8-hbwsph_WGqOV0FyuhXAFc7Gq88Lf4DGqQ1GJS0reGN9Jm_JuEv_LdsZr8DdazO2q3_31WZXILYcmkKpmYHbwWpCz6kVzQu9IWNm2ZeVeLYogt20UwfKB8GzbjGhhQS2Ql9WBq4obACxAH6npvllHAMv5rCFJOvm0nJC03W1b1ERmITTYHeg.kl9igvFTce-joTztK4Fjrf_bhkAL8egZiwfcyATDcwQ&dib_tag=se&hvadid=779528287117&hvdev=c&hvexpln=0&hvlocphy=9010753&hvnetw=g&hvocijid=5662668196022670780--&hvqmt=e&hvrand=5662668196022670780&hvtargid=kwd-2474963753682&hydadcr=18037_13447374_16249&keywords=hosyond%2B7%2Binch%2Btouchscreen&mcid=587a8d7b4df23ab0b2fe2b72ecf47f9e&qid=1782308758&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1"> Link </a> |
+
+<br>
 
 # Other Resources
 - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
